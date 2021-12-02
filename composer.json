@@ -1,0 +1,39 @@
+{
+    "name": "haomvc/haomvc",
+    "description": "the new HaoMVC framework",
+    "type": "project",
+    "keywords": [
+        "framework",
+        "thinkphp",
+        "ORM"
+    ],
+    "homepage": "http://www.haomvc.com/",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "HaoMVC",
+            "email": "haomvc@outlook.com"
+        }       
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "haomvc/framework": "^1.0"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.2",
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php think service:discover",
+            "@php think vendor:publish"
+        ]
+    }
+}
